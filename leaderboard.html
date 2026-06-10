@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/config.js"></script>
+    <script src="js/leaderboard.js" defer></script>
+    <script src="js/header.js" defer></script>
+
+    <title></title>
+    <link href="css/leaderboard.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="logo">
+        <a href="#" class="logoRef">Chess.org</a>
+      </div>
+      <nav class="navigation">
+        <a href="#" class="play">Play</a>
+        <a href="#" class="leaders-btn">Leaders</a>
+      </nav>
+      <nav class="auth">
+        <a href="#" class="register">Register</a>
+        <a href="#" class="login">Sign in</a>
+        <a href="#" class="exit hidden">Exit</a>
+      </nav>
+    </header>
+  <div class="main-content">
+  <div class="leaderboard-container">
+    <table class="leaderboard">
+      <h2>Leaderboard</h2>
+      <thead>
+        <tr>
+          <th>Player</th>
+          <th>Rating</th>
+          <th>Won</th>
+          <th>Draw</th>
+          <th>Lost</th>
+        </tr>
+      </thead>
+      <tbody id="leaderboard-body"></tbody>
+    </table>
+  </div>
+  </div>
+</body>
+
+</html>

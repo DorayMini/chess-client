@@ -1,0 +1,70 @@
+.site-header {
+  font-family: 'Roboto', sans-serif;
+  color: #E6E6E6;
+  display: flex;
+  justify-content: space-between;   
+  align-items: center;
+  background-color: #22262E;
+  padding: 10px 40px;
+}
+
+
+.site-header .logo a {
+  font-weight: 600;
+  color: #FFFFFF;
+  font-size: 28px;
+  text-decoration: none;
+}
+
+.site-header .navigation {
+  display: flex;
+  gap: 30px;
+  text-align: left;
+}
+
+.site-header .navigation a {
+  color: #E6E6E6;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: opacity 0.1s;
+}
+
+.site-header .navigation a:hover {
+  opacity: 0.9;
+}
+
+.site-header .auth {
+  display: flex;
+  gap: 15px;
+}
+
+.site-header .auth a {
+  color: #E6E6E6;
+  text-decoration: none;
+  padding: 4px 18px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.site-header .auth a:hover {
+  opacity: 0.8;
+}
+
+.site-header .auth .register {
+  border: 2px solid #7652CA;
+  background-color: transparent;
+}
+
+.site-header .auth .login {
+  background-color: #7652CA;
+}
+
+.hidden {
+  display: none !important;
+}
+
+
