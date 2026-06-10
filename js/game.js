@@ -282,7 +282,7 @@ function socketOpenHandler() {
 let socket;
 
 function connect() {
-  socket = new WebSocket('ws://localhost:8080');
+  socket = new WebSocket(`${window.APP_CONFIG.WS_URL}`);
 
   socket.onopen = () => {
     socketOpenHandler();
