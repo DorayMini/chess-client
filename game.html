@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="js/game.js" defer></script>
+    <script src="js/header.js" defer></script>
+    <link href="css/game.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <header class="site-header">
+      <div class="logo">
+        <a href="#" class="menu-btn">Chess.org</a>
+      </div>
+      <nav class="navigation">
+        <a href="#" class="resign-btn">Play</a>
+        <a href="#" class="resign-btn">Leaders</a>
+      </nav>
+    </header>
+    
+    <div class="main-container">
+    <div class="game-container">
+      
+      <div class="board-wrapper">
+        <canvas id="board" width="640" height="640"></canvas>
+    
+        <div id="reconnect-overlay" class="message hidden">
+          <h3>Connection Lost</h3>
+          <p id="reconnect-timer">Waiting: 30s</p>
+        </div>
+      </div>
+      <div class="sidebar">
+        <div class="player-card enemy">
+          <div class="player-name">Unknown</div>
+          <div class="player-rating">1502</div>
+        </div>
+
+        <div class="menu">
+          <div class="draw-message message hidden">
+            <h3>Draw Offered</h3>
+            <p>Waiting for opponent</p>
+            <button type="button" id="withdraw">Withdraw</button>
+          </div>
+
+          <div class="draw-offer-message message hidden">
+            <h3>Draw Offered</h3>
+            <p>Your opponent has offered a draw</p>
+            <div class="draw-actions">
+              <button type="button" id="accept-draw">Accept</button>
+              <button type="button" id="decline-draw">Decline</button>
+           </div>
+          </div>
+
+          <div class = "buttons">
+            <button type="button" class="resign-btn btn">Resign</button>
+            <button type="button" id="draw" class="btn">Draw</button>
+          </div>
+        </div>
+
+        <div class="player-card me">
+          <div class="player-name">Unknown</div>
+          <div class="player-rating">1502</div>
+        </div>
+
+      </div>
+      </div>
+    </div>
+    </div>
+
+  </body>
+  <dialog id="loseModal" class="modal lose-theme">
+  <div class="modal-header">
+    <div class="modal-icon">🚩</div>
+  </div>
+  <div class="modal-body">
+    <h2>You Lose</h2>
+    <p>By Checkmate</p>
+    <div class="score-container">
+      <span class="score-main">653</span>
+      <span class="score-plus">-15</span>
+    </div>
+    <div class="button-group">
+      <button type="button" class="btn-primary gameButton">New Game</button>
+      <button type="button" class="btn-secondary homeButton">Home</button>
+    </div>
+  </div>
+</dialog>
+<dialog id="drawModal" class="modal draw-theme">
+  <div class="modal-header">
+    <div class="modal-icon">🤝</div>
+  </div>
+  <div class="modal-body">
+    <h2>Draw</h2>
+    <p>By Agreement</p>
+    <div class="score-container">
+      <span class="score-main">653</span>
+      <span class="score-plus">0</span>
+    </div>
+    <div class="button-group">
+      <button type="button" class="btn-primary gameButton">New Game</button>
+      <button type="button" class="btn-secondary homeButton">Home</button>
+    </div>
+  </div>
+</dialog>
+<dialog id="wonModal" class="modal won-theme">
+  <div class="modal-header">
+    <div class="modal-icon">👑</div>
+  </div>
+  <div class="modal-body">
+    <h2>You Won!</h2>
+    <p>By Checkmate</p>
+    <div class="score-container">
+      <span class="score-main">653</span>
+      <span class="score-plus">+15</span>
+    </div>
+    <div class="button-group">
+      <button type="button" class="btn-primary gameButton">New Game</button>
+      <button type="button" class="btn-secondary homeButton">Home</button>
+    </div>
+  </div>
+</dialog>
+<dialog id="resignModal" class="modal resign-theme">
+  <div class="modal-header">
+    <div class="modal-icon">🏳️</div>
+  </div>
+  <div class="modal-body">
+    <h2>Resign?</h2>
+    <p>This match will end in a loss.<br>Confirm your decision.</p>
+    <div class="button-group">
+      <button type="button" class="btn-primary stayBtn">Stay</button>
+      <button type="button" class="btn-secondary resignBtn">Resign</button>
+    </div>
+  </div>
+</dialog>
+
+<div id="promotion-menu" class="promo-menu"></div>
+
+<div class="loader-wrapper hidden">
+  <p class="loader-text">Пошук гри</p>
+  <span class="loader"></span>
+</div>
+
+</html>
