@@ -9,6 +9,6 @@ const wsProtocol = protocol === "https:" ? "wss:" : "ws:";
 const apiProtocol = protocol;
 
 window.APP_CONFIG = {
-    API_URL: `${apiProtocol}//${serverHost}:8081`,
-    WS_URL: `${wsProtocol}//${serverHost}:8080`
+    API_URL: `${apiProtocol}//${serverHost}`,
+    WS_URL: `${wsProtocol}//${serverHost}`
 };
