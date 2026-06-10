@@ -3,7 +3,10 @@ async function getLeaders() {
   try {
     const response = await fetch(`${window.APP_CONFIG.API_URL}/api/game/leaders`, {
       method: 'GET',
-      headers: {'Content-Type': "application/json"}
+      headers: {
+        'Content-Type': "application/json",
+        'ngrok-skip-browser-warning': 'true'
+      }
     });
 
     const result = await response.json();
